@@ -1,0 +1,28 @@
+{
+  "title": "Swap Option/Command only in PUBG Method 2",
+  "rules": [
+	{
+            "description": "Change left_control+1/2/v/q to home/end/page_down/page_up (rev 2)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("1", ["left_control"], ["any"]) %>,
+                    "to": <%= to([["home"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("2", ["left_control"], ["any"]) %>,
+                    "to": <%= to([["end"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["left_control"], ["any"]) %>,
+                    "to": <%= to([["page_down"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("q", ["left_control"], ["any"]) %>,
+                    "to": <%= to([["page_up"]]) %>
+         }
+      ]
+}
